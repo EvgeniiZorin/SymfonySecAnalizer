@@ -37,7 +37,7 @@ Este POC realiza pruebas en las siguientes rutas y archivos comunes en Symfony:
    ```
 4. Ejecuta en command line:
    ```bash
-   python3 SymfonySecAnalizer.py`
+   python3 SymfonySecAnalizer.py -u https://example.com
    ```
 
 Ejemplo de salida:
