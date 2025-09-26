@@ -1,9 +1,8 @@
 # SymfonySecAnalizer
-# m10sec@proton.me
 
-# Symfony Vulnerability POC
+Este script en Python es un Proof of Concept (POC) para identificar vulnerabilidades comunes en aplicaciones web basadas en el framework Symfony (**Symfony Vulnerability POC**). El script prueba configuraciones inseguras y archivos expuestos en entornos donde el modo de depuración o profiler de Symfony está activado, permitiendo al usuario identificar rápidamente potenciales fallos de seguridad.
 
-Este script en Python es un Proof of Concept (POC) para identificar vulnerabilidades comunes en aplicaciones web basadas en el framework Symfony. El script prueba configuraciones inseguras y archivos expuestos en entornos donde el modo de depuración o profiler de Symfony está activado, permitiendo al usuario identificar rápidamente potenciales fallos de seguridad.
+Email de contacto: m10sec@proton.me
 
 ## Características
 
@@ -29,20 +28,22 @@ Este POC realiza pruebas en las siguientes rutas y archivos comunes en Symfony:
 
 1. Asegúrate de tener Python 3.x instalado en tu sistema.
 2. Instala la biblioteca `requests` ejecutando el siguiente comando:
-
    ```bash
    pip install requests
-
-Cambia la URL en SymfonySecAnalizer.py
+   ```
+3. Cambia la URL en `SymfonySecAnalizer.py`
+   ```py
    target_url = "http://example.com"  # Cambia esta URL al sitio objetivo
+   ```
+4. Ejecuta en command line:
+   ```bash
+   python3 SymfonySecAnalizer.py`
+   ```
 
-   Ejecuta:
+Ejemplo de salida:
 
-   $python3 poc_symfony.py
-
-
-   Ejemplo de salida:
-   Target is reachable.
+```bash
+Target is reachable.
 Symfony Version Detected: 4.4.19
 
 [+] exposed_env_file found at http://example.com/.env
@@ -56,7 +57,8 @@ exposed_env_file: http://example.com/.env
 console_route: http://example.com/_profiler
 profiler_debug: http://example.com/app_dev.php/_profiler
 file_open: http://example.com/app_dev.php/_profiler/open?file=app/config/parameters.yml
+```
 
-Advertencia
+## Advertencia
 
 Este script debe utilizarse únicamente con fines de prueba y en entornos autorizados o controlados. El uso de este POC en sistemas de terceros sin permiso explícito puede ser ilegal y está prohibido.
